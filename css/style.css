@@ -66,13 +66,30 @@ header #btn-menu span {
   justify-content: center;
 }
 header #btn-menu span a {
+  text-transform: uppercase;
   padding: 0 50px 15px 50px;
   border-bottom: solid 2px green;
   color: #5CB31C;
   font-size: 20px;
 }
+@media (max-width: 768px) {
+  header #btn-menu {
+    z-index: inherit;
+    position: relative;
+    margin: inherit;
+    display: block;
+    float: left;
+    top: inherit;
+    height: 100%;
+  }
+  header #btn-menu span a {
+    padding: 0 15px;
+    border: none;
+  }
+}
 header #logo {
   height: 100%;
+  float: left;
   display: flex;
   align-items: center;
   display: inline-block;
@@ -88,12 +105,27 @@ header #logo span a {
 header #logo span a img {
   display: block;
 }
+@media (max-width: 768px) {
+  header #logo span a img {
+    width: 45px;
+  }
+}
+@media (max-width: 300px) {
+  header #logo span a img {
+    width: 30px;
+  }
+}
 header span {
   display: flex;
   align-items: center;
   float: right;
   height: 100%;
   font-size: 15px;
+}
+@media (max-width: 768px) {
+  header span {
+    font-size: 12px;
+  }
 }
 header nav {
   height: 100%;
