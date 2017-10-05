@@ -27,9 +27,6 @@
   margin: 0;
   padding: 0;
 }
-html {
-  background-color: grey;
-}
 body {
   font-family: RobotoCondensed;
 }
@@ -41,6 +38,7 @@ a:focus {
   cursor: pointer;
 }
 header {
+  border-bottom: 1px solid #e5e5e5;
   background-color: white;
   position: fixed;
   height: 88px;
@@ -66,6 +64,7 @@ header #btn-menu span {
   justify-content: center;
 }
 header #btn-menu span a {
+  font-family: RobotoCondensedBold;
   text-transform: uppercase;
   padding: 0 50px 15px 50px;
   border-bottom: solid 2px green;
@@ -140,10 +139,36 @@ header nav ul {
   float: right;
 }
 header nav ul li {
+  cursor: pointer;
   height: 100%;
   list-style-type: none;
   display: flex;
   align-items: center;
+}
+header nav ul li:hover > .sub-menu {
+  opacity: 1;
+}
+header nav ul li .sub-menu {
+  opacity: 0;
+  -webkit-transition: opacity 200ms ease;
+  transition: opacity 200ms ease;
+  background-color: #5CB31C;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  top: 100%;
+}
+header nav ul li .sub-menu li {
+  width: 100%;
+}
+header nav ul li .sub-menu li a {
+  width: 100%;
+  color: white;
+  font-family: Roboto;
+  text-transform: capitalize;
+  font-size: 12px;
 }
 header nav ul li a {
   font-size: 17px;
@@ -169,7 +194,8 @@ header nav ul li a {
     font-size: 11px;
   }
 }
-header nav ul li a:hover {
+header nav ul li a:hover,
+header nav ul li a:visited {
   color: #5CB31C;
 }
 @media (max-width: 1200px) {
@@ -199,9 +225,27 @@ header nav ul li a:hover {
     height: auto;
   }
   header nav ul li {
-    height: 30px;
+    height: auto;
+    position: relative;
+    display: block;
+  }
+  header nav ul li:hover > .sub-menu,
+  header nav ul li:active > .sub-menu {
+    display: block;
+  }
+  header nav ul li .sub-menu {
+    display: none;
+    top: 0;
+    left: 20px;
+    padding: 0;
+    position: relative;
+    float: none;
   }
   header nav ul li a {
+    color: white;
+  }
+  header nav ul li a:focus,
+  header nav ul li a:visited {
     color: white;
   }
 }

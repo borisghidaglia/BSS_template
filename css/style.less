@@ -27,6 +27,7 @@
 
 // Constantes
 @green:#5CB31C;
+@light_grey:#e5e5e5;
 
 
 // Functions
@@ -58,7 +59,7 @@
   padding: 0;
 }
 html{
-    background-color: grey;
+    // background-color: grey;
 }
 body{
     font-family: RobotoCondensed;
@@ -72,6 +73,8 @@ a {
 
 // HEADER
 header{
+    border-bottom:1px solid @light_grey;
+    background-color: white;
     background-color: white;
     position: fixed;
     height: 88px;
@@ -94,6 +97,7 @@ header{
             align-items: center;
             justify-content: center;
             a{
+                font-family: RobotoCondensedBold;
                 text-transform: uppercase;
                 padding: 0 50px 15px 50px;
                 border-bottom: solid 2px green;
@@ -155,6 +159,7 @@ header{
     nav{
         .full();
         display: inline;
+        // level 1 menu
         ul{
             margin:0;
             display: flex;
@@ -162,10 +167,36 @@ header{
             height:100%;
             float: right;
             li{
+                cursor: pointer;
                 height: 100%;
                 list-style-type: none;
                 display: flex;
                 align-items: center;
+                //level 2 menu - large
+                &:hover>.sub-menu{
+                    opacity: 1;
+                }
+                .sub-menu{
+                    opacity: 0;
+                    .transition(opacity,200ms,ease);
+                    background-color: @green;
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    height: auto;
+                    top:100%;
+                    li{
+                        width: 100%;
+                        a{
+                            width: 100%;
+                            color: white;
+                            font-family: Roboto;
+                            text-transform: capitalize;
+                            font-size: 12px;
+                        }
+                    }
+                }
                 a{
                     font-size: 17px;
                     font-family: RobotoCondensedBold;
@@ -183,7 +214,7 @@ header{
                     @media(max-width: 1200px){
                         font-size: 11px;
                     }
-                    &:hover{
+                    &:hover,&:visited{
                         color: @green;
                     }
                 }
@@ -213,9 +244,26 @@ header{
                 align-items: flex-start;
                 height: auto;
                 li{
-                    height: 30px;
+                    height: auto;
+                    position: relative;
+                    //level 2 menu - mobile
+                    display: block;
+                    &:hover>.sub-menu, &:active>.sub-menu{
+                        display: block;
+                    }
+                    .sub-menu{
+                        display: none;
+                        top: 0;
+                        left: 20px;
+                        padding:0;
+                        position: relative;
+                        float: none;
+                    }
                     a{
                         color: white;
+                        &:focus,&:visited{
+                            color: white;
+                        }
                     }
                 }
             }
