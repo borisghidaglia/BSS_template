@@ -146,12 +146,10 @@ header nav ul li {
   align-items: center;
 }
 header nav ul li:hover > .sub-menu {
-  opacity: 1;
+  visibility: visible;
 }
 header nav ul li .sub-menu {
-  opacity: 0;
-  -webkit-transition: opacity 200ms ease;
-  transition: opacity 200ms ease;
+  visibility: hidden;
   background-color: #5CB31C;
   position: absolute;
   display: flex;
@@ -216,9 +214,10 @@ header nav ul li a:visited {
   header nav #close-menu .glyphicon,
   header nav #close-menu .glyphicon-remove {
     color: white;
+    font-size: 20px;
   }
   header nav ul {
-    padding: 50px 30px;
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -229,10 +228,6 @@ header nav ul li a:visited {
     position: relative;
     display: block;
   }
-  header nav ul li:hover > .sub-menu,
-  header nav ul li:active > .sub-menu {
-    display: block;
-  }
   header nav ul li .sub-menu {
     display: none;
     top: 0;
@@ -240,8 +235,16 @@ header nav ul li a:visited {
     padding: 0;
     position: relative;
     float: none;
+    opacity: 1;
+  }
+  header nav ul li .sub-menu li a {
+    padding: 5px 10px;
   }
   header nav ul li a {
+    color: white !important;
+  }
+  header nav ul li a:focus,
+  header nav ul li a:visited {
     color: white;
   }
   header nav ul li a:focus,
@@ -277,4 +280,7 @@ header nav ul li a:visited {
   .hidden-lg {
     display: block !important;
   }
+}
+.wrapped {
+  display: block !important;
 }

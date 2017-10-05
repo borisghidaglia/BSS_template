@@ -15,3 +15,12 @@ function toggle_menu() {
         $('nav').removeClass('translated');
     }
 }
+
+// responsive sub menu
+$('.wrap').click(function () {
+    if (w <= 1200 && !$(this.children[1]).hasClass('wrapped')) {
+        $(this.children[1]).addClass('wrapped');
+    } else {
+        $(this.children[1]).removeClass('wrapped');
+    }
+});
