@@ -229,6 +229,7 @@ header nav ul li a:visited {
     display: block;
   }
   header nav ul li .sub-menu {
+    visibility: visible;
     display: none;
     top: 0;
     left: 20px;
@@ -242,10 +243,6 @@ header nav ul li a:visited {
   }
   header nav ul li a {
     color: white !important;
-  }
-  header nav ul li a:focus,
-  header nav ul li a:visited {
-    color: white;
   }
   header nav ul li a:focus,
   header nav ul li a:visited {
