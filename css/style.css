@@ -283,3 +283,23 @@ header nav ul li a:visited {
 .wrapped {
   display: block !important;
 }
+#multiscroll-container {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: calc(100% - 88px);
+  top: 88px;
+  left: 0;
+}
+#multiscroll-container .background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
