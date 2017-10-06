@@ -5,7 +5,6 @@ $('#myMenu a').click(function () {
         obj = document.getElementById(hash);
         header_height = window.getComputedStyle(document.getElementsByTagName('header')[0]).height;
         header_height = header_height.replace('px','');
-        console.log(header_height);
         if (obj) {
             scrollValue = $(obj).offset().top;
             $('body,html').animate({

@@ -1,11 +1,26 @@
 var w = $(window).width();
 
+
 $(document).ready(function () {
     w = $(window).width();
+    if (w>=768) {
+        mobile = false;
+    } else {
+        mobile = true;
+    }
 })
 
 $(window).resize(function () {
     w = $(window).width();
+    if (w>=768 && mobile) {
+        location.hash = "";
+        location.reload();
+        mobile = false;
+    } else if (w < 768 && !mobile) {
+        location.hash = "";
+        location.reload();
+        mobile = true;
+    }
 });
 
 function toggle_menu() {
