@@ -65,11 +65,22 @@ html{
 body{
     font-family: RobotoCondensed;
 }
+
+body,html{
+    @media(max-width:768px){
+        overflow: scroll;
+    }
+}
+
 a {
     &,&:hover,&:visited,&:focus{
         text-decoration: none;
         cursor: pointer;
     }
+}
+
+#main{
+    padding: 0;
 }
 
 // HEADER
@@ -285,7 +296,7 @@ header{
     color: white;
     border-radius: 80px;
     margin: 0px 5px;
-    &:hover{
+    &:hover,&:focus{
         color:white;
     }
 }
@@ -325,5 +336,30 @@ header{
         background-position: center center;
         background-size:cover;
         background-repeat:no-repeat;
+    }
+}
+
+
+#main-mobile{
+    position: absolute;
+    z-index: -1;
+    margin: @header-height 0px 0px 0px;
+    width: 100%;
+    padding: 0;
+    >.container-fluid{
+        padding: 0;
+        position: relative;
+        width: 100%;
+        .background-container{
+            display: block;
+            width: 100%;
+            height: calc(~"100vh" - @header-height);
+            background-position: center center;
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+        // >.row{
+        //     .full();
+        // }
     }
 }
