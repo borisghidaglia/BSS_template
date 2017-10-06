@@ -112,15 +112,22 @@ header #logo span a {
 }
 header #logo span a img {
   display: block;
+  width: 150px;
 }
 @media (max-width: 768px) {
   header #logo span a img {
-    width: 45px;
+    width: 100px;
+    margin-left: -10px;
   }
 }
-@media (max-width: 300px) {
+@media (max-width: 340px) {
   header #logo span a img {
-    width: 30px;
+    width: 70px;
+  }
+}
+@media (max-width: 310px) {
+  header #logo span a img {
+    width: 50px;
   }
 }
 header span {
