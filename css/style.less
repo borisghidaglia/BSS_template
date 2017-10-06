@@ -247,6 +247,7 @@ header{
             background-color: @green;
             height: 100%;
             width: auto;
+            overflow: scroll;
             #close-menu{
                 position: absolute;
                 top: 10px;
@@ -257,6 +258,7 @@ header{
                 }
             }
             ul{
+                min-width: 170px;
                 padding: 40px 30px;
                 display: flex;
                 flex-direction: column;
@@ -276,7 +278,9 @@ header{
                         position: relative;
                         float: none;
                         opacity: 1;
+                        min-width: auto;
                         li{
+                            min-width: auto;
                             a{
                                 padding: 5px 10px;
                             }

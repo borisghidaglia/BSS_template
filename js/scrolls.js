@@ -33,10 +33,11 @@ $(window).resize(function () {
 
 function build_multiscroll() {
     $('#multiscroll').multiscroll({
+        anchors: ['marque1', 'marque2'],
         verticalCentered : true,
         scrollingSpeed: 700,
         easing: 'easeInQuart',
-        menu: false,
+        menu: "#myMenu",
         sectionsColor: [],
         navigation: false,
         navigationPosition: 'right',

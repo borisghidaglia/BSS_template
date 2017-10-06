@@ -7,49 +7,22 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/jquery.multiscroll.min.css" />
         <link rel="stylesheet" href="css/style.css">
-        <title>Bio Santé Solution</title>
+        <title>Bio Santé Solutions</title>
     </head>
     <body id="main" class="container-fluid">
         <header>
-            <div id="logo"><span><a href="#"><img src="img/logo.png"></a></span></div>
+            <div id="logo"><span><a href="index.html"><img src="img/logo.png"></a></span></div>
             <span><a class="green-btn" href="#">Panier</a></span>
             <span><a class="green-btn" href="#">Compte</a></span>
             <div id="btn-menu" class="hidden-lg" onclick="toggle_menu()" ><span><a href="#">Menu</a></span></div>
             <nav class="translate-left">
                 <div id="close-menu" class="hidden-lg" onclick="toggle_menu()"><span class="glyphicon glyphicon-remove"></span></div>
-                <ul>
-                    <li class="wrap"><a href="#">Proviotic</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Lorem Ipsum</a></li>
-                            <li><a href="#">dolor</a></li>
-                            <li><a href="#">Lorem ipsum dolor</a></li>
-                        </ul>
-                    </li>
-                    <li class="wrap"><a href="#">Pure & Scientific</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">dolor</a></li>
-                        </ul>
-                    </li>
-                    <li class="wrap"><a href="#">Unique & Powerfull</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Lorem Ipsum</a></li>
-                            <li><a href="#">dolor</a></li>
-                            <li><a href="#">Lorem ipsum dolor</a></li>
-                        </ul>
-                    </li>
-                    <li class="wrap"><a href="#">Transparent & European</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Lorem Ipsum</a></li>
-                            <li><a href="#">dolor</a></li>
-                        </ul>
-                    </li>
-                    <li class="wrap"><a href="#">About Proviotics</a>
-                        <ul class="sub-menu">
-                            <li><a href="#">Lorem Ipsum</a></li>
-                            <li><a href="#">dolor</a></li>
-                            <li><a href="#">Lorem ipsum dolor</a></li>
-                        </ul>
-                    </li>
+                <ul id="myMenu">
+                    <li class="wrap" data-menuanchor="marque1"><a href="#marque1">Proviotic</a></li>
+                    <li class="wrap" data-menuanchor="marque2"><a href="#marque2">Pure & Scientific</a> </li>
+                    <li class="wrap"><a href="#">Unique & Powerfull</a></li>
+                    <li class="wrap"><a href="#">Transparent & European</a></li>
+                    <li class="wrap"><a href="#">About Proviotics</a></li>
                     <li><a href="#">Contact us</a></li>
                 </ul>
             </nav>
