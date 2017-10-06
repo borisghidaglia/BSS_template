@@ -52,9 +52,9 @@ function build_multiscroll() {
         touchSensitivity: 5,
 
         //responsive
-        responsiveWidth: 768,
+        responsiveWidth: 0,
         responsiveHeight: 0,
-        responsiveExpand: true,
+        responsiveExpand: false,
 
         // Custom selectors
         sectionSelector: '.ms-section',
