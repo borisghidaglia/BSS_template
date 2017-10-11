@@ -1,0 +1,164 @@
+header{
+    border-bottom:1px solid @light_grey;
+    background-color: white;
+    background-color: white;
+    position: fixed;
+    height: @header-height;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 10px;
+    z-index: 2;
+    #btn-menu{
+        z-index: -1;
+        display: inline;
+        position: absolute;
+        top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        span{
+            float: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                font-family: RobotoCondensedBold;
+                text-transform: uppercase;
+                padding: 0 50px 15px 50px;
+                border-bottom: solid 2px green;
+                color:@green;
+                font-size: 20px;
+            }
+        }
+    @media(max-width: 768px){
+        z-index: inherit;
+        position: relative;
+        margin: inherit;
+        display: block;
+        float: left;
+        top:inherit;
+        height: 100%;
+        span{
+            a{
+                padding: 0 15px;
+                border: none;
+
+            }
+        }
+    }
+    }
+    #logo{
+        height: 100%;
+        float: left;
+        display: flex;
+        align-items: center;
+        display: inline-block;
+        margin-left: 10px;
+        span{
+            display: flex;
+            align-items: center;
+            a{
+                display: block;
+                img{
+                    display: block;
+                    width: 150px;
+                    @media(max-width: 768px){
+                        width: 100px;
+                        margin-left: -10px;
+                    }
+                    @media(max-width: 340px){
+                        width: 70px;
+                    }
+                    @media(max-width: 310px){
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+    span{
+        display: flex;
+        align-items: center;
+        float: right;
+        height: 100%;
+        font-size: 15px;
+        @media(max-width: 768px){
+            font-size: 12px;
+        }
+    }
+    nav{
+        .full();
+        display: inline;
+        // level 1 menu
+        ul{
+            margin:0;
+            display: flex;
+            align-items: center;
+            height:100%;
+            float: right;
+            li{
+                cursor: pointer;
+                height: 100%;
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                //level 2 menu - large
+                a{
+                    font-size: 1.2vw;
+                    font-family: RobotoCondensedBold;
+                    background: transparent;
+                    display: block;
+                    color:@green;
+                    padding: 10px;
+                    text-transform: uppercase;
+                    &:hover,&:visited{
+                        color: @green;
+                    }
+                }
+            }
+        }
+        // nav responsive
+        @media(max-width: 1200px){
+            position: fixed;
+            right:0;
+            top:0;
+            display: block;
+            background-color: @green;
+            height: 100%;
+            width: auto;
+            overflow: scroll;
+            #close-menu{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                .glyphicon,.glyphicon-remove{
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+            ul{
+                min-width: 170px;
+                padding: 40px 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+                li{
+                    height: auto;
+                    position: relative;
+                    //level 2 menu - mobile
+                    display: block;
+                    a{
+                        color: white !important;
+                        font-size: 2vh;
+                        &:focus,&:visited{
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

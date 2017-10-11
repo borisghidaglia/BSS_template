@@ -1,0 +1,41 @@
+#multiscroll-container{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 0;
+    width:  calc(100% + 1px);
+    height: calc(~"100%" - @header-height);
+    top: @header-height;
+    left: 0;
+    .background-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        .full();
+        background-position: center center;
+        background-size:cover;
+        background-repeat:no-repeat;
+    }
+}
+
+#main-mobile{
+    position: absolute;
+    z-index: 0;
+    margin: @header-height 0px 0px 0px;
+    width: 100%;
+    padding: 0;
+    >.container-fluid{
+        padding: 0;
+        position: relative;
+        width: 100%;
+        .background-container{
+            display: block;
+            width: 100%;
+            height: calc(~"100vh" - @header-height);
+            background-position: center center;
+            background-size:cover;
+            background-repeat:no-repeat;
+            position: relative;
+        }
+    }
+}

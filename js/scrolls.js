@@ -1,8 +1,21 @@
 var exists = false;
+var anchors = []
 $(document).ready(function() {
     var w = $(window).width();
+    if (w > 768) {
+        var li = document.getElementById('myMenu').children;
+        for (var i = 0; i < li.length; i++) {
+            anchor = li[i].attributes.getNamedItem('data-menuanchor');
+            if (anchor != null) {
+                anchors[i] = anchor.value;
+            }
+        if (anchors == null) {
+            anchors = false;
+        }
+        }
+    }
     build_multiscroll();
-    if (w >= 768) {
+    if (w > 768) {
         exists = true;
     } else {
         $.fn.multiscroll.destroy();
@@ -14,7 +27,7 @@ $(document).ready(function() {
 
 $(window).resize(function () {
     var w = $(window).width();
-    if (w >= 768){
+    if (w > 768){
         if (!exists) {
             $.fn.multiscroll.build();
             document.getElementById('main').style.overflow = 'hidden';
@@ -33,7 +46,7 @@ $(window).resize(function () {
 
 function build_multiscroll() {
     $('#multiscroll').multiscroll({
-        anchors: ['marque1', 'marque2'],
+        anchors: anchors,
         verticalCentered : true,
         scrollingSpeed: 700,
         easing: 'easeInQuart',

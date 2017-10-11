@@ -1,0 +1,24 @@
+// EFFECTS
+.transition(@type,@duration,@effect){
+    -webkit-transition: @type @duration @effect;
+    transition: @type @duration @effect;
+}
+.translate(@val1,@val2){
+    -webkit-transform: translate(@val1,@val2);
+    -moz-transform: translate(@val1,@val2);
+    transform: translate(@val1,@val2);
+}
+.translate_effect(@p1,@p2, @delay:400ms){
+    -webkit-transform: translate(@p1,@p2);
+    -moz-transform: translate(@p1,@p2);
+    transform: translate(@p1,@p2);
+    -webkit-transition: -webkit-transform @delay ease-out 100ms;
+    -moz-transition: -moz-transform @delay ease-out 100ms;
+    transition: transform @delay ease-out 100ms;
+}
+
+//DIMENSIONS
+.full(){
+    height:100%;
+    width:100%;
+}

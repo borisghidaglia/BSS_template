@@ -26,6 +26,50 @@
   font-family: 'AmericanCR';
   src: url(../fonts/american-condensed-regular.otf);
 }
+.translate-left {
+  -webkit-transform: translate(100%, 0);
+  -moz-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+  -webkit-transition: -webkit-transform 400ms ease-out 100ms;
+  -moz-transition: -moz-transform 400ms ease-out 100ms;
+  transition: transform 400ms ease-out 100ms;
+}
+.translated {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.green-btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background-color: #5CB31C;
+  color: white;
+  border-radius: 80px;
+  margin: 0px 5px;
+}
+.green-btn:hover,
+.green-btn:focus {
+  color: white;
+}
+@media (max-width: 1200px) {
+  .hidden-lg {
+    display: block !important;
+  }
+}
+@media (max-width: 768px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .visible-xs {
+    display: block !important;
+  }
+}
+.wrapped {
+  display: block !important;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -222,46 +266,12 @@ header nav ul li a:visited {
     color: white;
   }
 }
-.green-btn {
-  cursor: pointer;
-  text-transform: uppercase;
-  padding: 5px 10px;
-  background-color: #5CB31C;
-  color: white;
-  border-radius: 80px;
-  margin: 0px 5px;
-}
-.green-btn:hover,
-.green-btn:focus {
-  color: white;
-}
-.translate-left {
-  -webkit-transform: translate(100%, 0);
-  -moz-transform: translate(100%, 0);
-  transform: translate(100%, 0);
-  -webkit-transition: -webkit-transform 400ms ease-out 100ms;
-  -moz-transition: -moz-transform 400ms ease-out 100ms;
-  transition: transform 400ms ease-out 100ms;
-}
-.translated {
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-@media (max-width: 1200px) {
-  .hidden-lg {
-    display: block !important;
-  }
-}
-.wrapped {
-  display: block !important;
-}
 #multiscroll-container {
   padding: 0;
   margin: 0;
   position: absolute;
   z-index: 0;
-  width: 100%;
+  width: calc(101%);
   height: calc(100% - 88px);
   top: 88px;
   left: 0;
@@ -275,6 +285,27 @@ header nav ul li a:visited {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+#main-mobile {
+  position: absolute;
+  z-index: 0;
+  margin: 88px 0px 0px 0px;
+  width: 100%;
+  padding: 0;
+}
+#main-mobile > .container-fluid {
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+#main-mobile > .container-fluid .background-container {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 88px);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
 #home-section {
   padding: 2vh 2vw;
@@ -348,27 +379,6 @@ header nav ul li a:visited {
   display: block;
   margin: 0 10px;
 }
-#main-mobile {
-  position: absolute;
-  z-index: 0;
-  margin: 88px 0px 0px 0px;
-  width: 100%;
-  padding: 0;
-}
-#main-mobile > .container-fluid {
-  padding: 0;
-  position: relative;
-  width: 100%;
-}
-#main-mobile > .container-fluid .background-container {
-  display: block;
-  width: 100%;
-  height: calc(100vh - 88px);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-}
 @media (max-width: 768px) {
   #main-mobile > .container-fluid .background-container #home-section {
     height: 100%;
@@ -395,4 +405,40 @@ header nav ul li a:visited {
 }
 #main-mobile > .container-fluid .background-container #home-section .main #home-tags p {
   font-size: 3vh;
+}
+.slide-section {
+  width: 100%;
+  height: calc(100% - 88px);
+  padding: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+}
+.slide-section .section-container > h1 {
+  color: white;
+  font-family: RobotoCondensedBold;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+.slide-section .section-container > p {
+  color: white;
+  font-size: 16px;
+  padding: 0;
+  line-height: 1;
+  font-family: RobotoThin;
+}
+.slide-section .section-container > .green-btn {
+  margin: 10px 0;
+  float: left;
+  font-size: 20px;
+  font-family: RobotoCondensedBold;
+}
+@media (max-width: 768px) {
+  .slide-section {
+    height: 100%;
+    width: 100%;
+  }
 }

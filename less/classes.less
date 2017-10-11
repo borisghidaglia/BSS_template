@@ -1,0 +1,42 @@
+.translate-left{
+    .translate_effect(100%,0);
+}
+
+.translated{
+    .translate(0,0);
+}
+
+.green-btn{
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    background-color: @green;
+    color: white;
+    border-radius: 80px;
+    margin: 0px 5px;
+    &:hover,&:focus{
+        color:white;
+    }
+}
+
+.hidden-lg{
+    @media (max-width:1200px){
+        display: block !important;
+    }
+}
+
+.hidden-xs{
+    @media (max-width:768px){
+        display: none !important;
+    }
+}
+
+.visible-xs{
+    @media (max-width:768px){
+        display: block !important;
+    }
+}
+
+.wrapped{
+    display: block !important;
+}
