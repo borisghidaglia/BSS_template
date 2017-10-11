@@ -22,6 +22,10 @@
   font-family: 'RobotoCondensedThin';
   src: url(../fonts/RobotoCondensed-Light.ttf);
 }
+@font-face {
+  font-family: 'AmericanCR';
+  src: url(../fonts/american-condensed-regular.otf);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -55,6 +59,7 @@ header {
   left: 0;
   top: 0;
   padding: 0 10px;
+  z-index: 2;
 }
 header #btn-menu {
   z-index: -1;
@@ -161,54 +166,14 @@ header nav ul li {
   display: flex;
   align-items: center;
 }
-header nav ul li:hover > .sub-menu {
-  visibility: visible;
-}
-header nav ul li .sub-menu {
-  visibility: hidden;
-  background-color: #5CB31C;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: auto;
-  top: 100%;
-  min-width: 150px;
-}
-header nav ul li .sub-menu li {
-  min-width: 150px;
-  width: 100%;
-}
-header nav ul li .sub-menu li a {
-  width: 100%;
-  color: white;
-  font-family: Roboto;
-  text-transform: capitalize;
-  font-size: 12px;
-}
 header nav ul li a {
-  font-size: 17px;
+  font-size: 1.2vw;
   font-family: RobotoCondensedBold;
   background: transparent;
   display: block;
   color: #5CB31C;
   padding: 10px;
   text-transform: uppercase;
-}
-@media (max-width: 1400px) {
-  header nav ul li a {
-    font-size: 15px;
-  }
-}
-@media (max-width: 1300px) {
-  header nav ul li a {
-    font-size: 13px;
-  }
-}
-@media (max-width: 1200px) {
-  header nav ul li a {
-    font-size: 11px;
-  }
 }
 header nav ul li a:hover,
 header nav ul li a:visited {
@@ -248,25 +213,9 @@ header nav ul li a:visited {
     position: relative;
     display: block;
   }
-  header nav ul li .sub-menu {
-    visibility: visible;
-    display: none;
-    top: 0;
-    left: 20px;
-    padding: 0;
-    position: relative;
-    float: none;
-    opacity: 1;
-    min-width: auto;
-  }
-  header nav ul li .sub-menu li {
-    min-width: auto;
-  }
-  header nav ul li .sub-menu li a {
-    padding: 5px 10px;
-  }
   header nav ul li a {
     color: white !important;
+    font-size: 2vh;
   }
   header nav ul li a:focus,
   header nav ul li a:visited {
@@ -274,6 +223,7 @@ header nav ul li a:visited {
   }
 }
 .green-btn {
+  cursor: pointer;
   text-transform: uppercase;
   padding: 5px 10px;
   background-color: #5CB31C;
@@ -310,7 +260,7 @@ header nav ul li a:visited {
   padding: 0;
   margin: 0;
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   height: calc(100% - 88px);
   top: 88px;
@@ -326,9 +276,81 @@ header nav ul li a:visited {
   background-size: cover;
   background-repeat: no-repeat;
 }
+#home-section {
+  padding: 2vh 2vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 88px);
+}
+#home-section > .main {
+  width: 100%;
+}
+#home-section h1 {
+  font-family: AmericanCR;
+  font-weight: bold;
+  font-size: 10vh;
+  color: #5CB31C;
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+}
+#home-section h2 {
+  font-family: AmericanCR;
+  font-weight: bold;
+  text-align: center;
+  font-size: 4vh;
+  padding: 0 0 30px 0;
+  margin: 0;
+}
+#home-section #btn-section {
+  display: flex;
+  justify-content: center;
+}
+#home-section #btn-section > .green-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  text-align: center;
+  font-size: 1.2vw;
+  margin: 0 4%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+#home-section #home-tags {
+  margin-top: 30px;
+}
+#home-section #home-tags p {
+  font-family: AmericanCR;
+  font-weight: bold;
+  text-align: justify;
+  font-size: 3vh;
+  line-height: 1;
+}
+#home-section #home-tags p .greyify {
+  color: #9E9E9E;
+}
+#home-section #home-logos {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home-section #home-logos > img {
+  max-width: 15%;
+  max-height: 8%;
+  display: block;
+  margin: 0 10px;
+}
 #main-mobile {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   margin: 88px 0px 0px 0px;
   width: 100%;
   padding: 0;
@@ -345,4 +367,32 @@ header nav ul li a:visited {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+@media (max-width: 768px) {
+  #main-mobile > .container-fluid .background-container #home-section {
+    height: 100%;
+    width: 100%;
+  }
+}
+#main-mobile > .container-fluid .background-container #home-section .main {
+  width: 100%;
+}
+#main-mobile > .container-fluid .background-container #home-section .main h1 {
+  font-size: 10vh;
+}
+#main-mobile > .container-fluid .background-container #home-section .main h2 {
+  font-size: 5vh;
+  padding-bottom: 20px;
+}
+#main-mobile > .container-fluid .background-container #home-section .main #btn-section > .green-btn {
+  font-size: 1.8vh;
+  width: 28%;
+  padding: 1% 2%;
+}
+#main-mobile > .container-fluid .background-container #home-section .main #home-tags {
+  margin-top: 10px;
+}
+#main-mobile > .container-fluid .background-container #home-section .main #home-tags p {
+  font-size: 3vh;
 }

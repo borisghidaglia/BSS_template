@@ -24,11 +24,16 @@
   font-family: 'RobotoCondensedThin';
   src: url(../fonts/RobotoCondensed-Light.ttf);
 }
+@font-face {
+  font-family: 'AmericanCR';
+  src: url(../fonts/american-condensed-regular.otf);
+}
 
 // Constantes
 @green:#5CB31C;
 @light_grey:#e5e5e5;
 @header-height: 88px;
+@dark_grey: #9E9E9E;
 
 
 // Functions
@@ -94,6 +99,7 @@ header{
     left: 0;
     top: 0;
     padding: 0 10px;
+    z-index: 2;
     #btn-menu{
         z-index: -1;
         display: inline;
@@ -190,48 +196,14 @@ header{
                 display: flex;
                 align-items: center;
                 //level 2 menu - large
-                &:hover>.sub-menu{
-                    visibility: visible;
-                }
-                .sub-menu{
-                    visibility: hidden;
-                    background-color: @green;
-                    position: absolute;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    height: auto;
-                    top:100%;
-                    min-width: 150px;
-                    li{
-                        min-width: 150px;
-                        width: 100%;
-                        a{
-                            width: 100%;
-                            color: white;
-                            font-family: Roboto;
-                            text-transform: capitalize;
-                            font-size: 12px;
-                        }
-                    }
-                }
                 a{
-                    font-size: 17px;
+                    font-size: 1.2vw;
                     font-family: RobotoCondensedBold;
                     background: transparent;
                     display: block;
                     color:@green;
                     padding: 10px;
                     text-transform: uppercase;
-                    @media(max-width: 1400px){
-                        font-size: 15px;
-                    }
-                    @media(max-width: 1300px){
-                        font-size: 13px;
-                    }
-                    @media(max-width: 1200px){
-                        font-size: 11px;
-                    }
                     &:hover,&:visited{
                         color: @green;
                     }
@@ -269,25 +241,9 @@ header{
                     position: relative;
                     //level 2 menu - mobile
                     display: block;
-                    .sub-menu{
-                        visibility: visible;
-                        display: none;
-                        top: 0;
-                        left: 20px;
-                        padding:0;
-                        position: relative;
-                        float: none;
-                        opacity: 1;
-                        min-width: auto;
-                        li{
-                            min-width: auto;
-                            a{
-                                padding: 5px 10px;
-                            }
-                        }
-                    }
                     a{
                         color: white !important;
+                        font-size: 2vh;
                         &:focus,&:visited{
                             color: white;
                         }
@@ -299,6 +255,7 @@ header{
 }
 
 .green-btn{
+    cursor: pointer;
     text-transform: uppercase;
     padding: 5px 10px;
     background-color: @green;
@@ -332,7 +289,7 @@ header{
     padding: 0;
     margin: 0;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     width: 100%;
     height: calc(~"100%" - @header-height);
     top: @header-height;
@@ -348,10 +305,83 @@ header{
     }
 }
 
+#home-section{
+    padding: 2vh 2vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: calc(~"100%" - @header-height);
+    >.main{
+        width: 100%;
+    }
+    h1{
+        font-family: AmericanCR;
+        font-weight: bold;
+        font-size: 10vh;
+        color: @green;
+        padding: 10px 0;
+        margin: 0;
+        text-align: center;
+    }
+    h2{
+        font-family: AmericanCR;
+        font-weight: bold;
+        text-align: center;
+        font-size: 4vh;
+        padding: 0 0 30px 0;
+        margin: 0;
+    }
+    #btn-section{
+        display: flex;
+        justify-content: center;
+        >.green-btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25%;
+            text-align: center;
+            font-size: 1.2vw;
+            margin: 0 4%;
+            padding: 1% 0;
+            font-weight: bold;
+        }
+    }
+    #home-tags{
+        margin-top: 30px;
+        p{
+            font-family: AmericanCR;
+            font-weight: bold;
+            text-align: justify;
+            font-size: 3vh;
+            line-height: 1;
+            .greyify{
+                color: @dark_grey;
+            }
+        }
+    }
+    #home-logos{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >img{
+            max-width: 15%;
+            max-height: 8%;
+            display: block;
+            margin: 0 10px;
+        }
+    }
+}
+
 
 #main-mobile{
     position: absolute;
-    z-index: -1;
+    z-index: 0;
     margin: @header-height 0px 0px 0px;
     width: 100%;
     padding: 0;
@@ -366,9 +396,35 @@ header{
             background-position: center center;
             background-size:cover;
             background-repeat:no-repeat;
+            position: relative;
+            #home-section{
+                @media(max-width: 768px){
+                    .full();
+                }
+                .main{
+                    width: 100%;
+                    h1{
+                        font-size: 10vh;
+                    }
+                    h2{
+                        font-size: 5vh;
+                        padding-bottom: 20px;
+                    }
+                    #btn-section{
+                        >.green-btn{
+                            font-size: 1.8vh;
+                            width: 28%;
+                            padding: 1% 2%;
+                        }
+                    }
+                    #home-tags{
+                        margin-top: 10px;
+                        p{
+                            font-size: 3vh;
+                        }
+                    }
+                }
+            }
         }
-        // >.row{
-        //     .full();
-        // }
     }
 }
