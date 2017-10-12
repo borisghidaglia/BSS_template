@@ -472,8 +472,10 @@ header nav ul li a:visited {
 .more-left .section-container > span,
 .more-right .section-container > span {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 30px;
+  top: 30px;
+  color: black;
+  font-size: 25px;
 }
 .more-left .section-container > h1,
 .more-right .section-container > h1,
