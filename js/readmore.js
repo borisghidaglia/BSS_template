@@ -1,22 +1,33 @@
-function readmore(elt) {
-    // more = elt.parentNode.parentNode.parentNode.children[1];
-    desktop = document.getElementById('main-desktop');
-    mobile = document.getElementById('main-mobile');
-    if (window.getComputedStyle(desktop).display == "block") {
-        if (!$(desktop).hasClass('slide-left')) {
-            $(desktop).addClass('slide-left');
-        } else {
-            $(desktop).addClass('translated');
-            $(desktop).removeClass('slide-left');
-            $(desktop).removeClass('translated');
-        }
+function readmore(elt,left) {
+    section = $(elt.closest('.ms-section'));
+
+    var animation = "";
+    if (left) {
+        animation = '100%';
+    } else {
+        animation ="-100%";
     }
 
-    if (window.getComputedStyle(mobile).display == "block") {
-        if (!$(mobile).hasClass('translate-left')) {
-            $(mobile).addClass('translate-left');
-        } else {
-            $(mobile).removeClass('translate-left');
-        }
+    if (!section.hasClass('read')) {
+        section.css({
+              "z-index": "999"
+        });
+        section.animate({
+            'left' : animation
+        },400, function() {
+            section.addClass('read');
+            $.fn.multiscroll.destroy();
+        });
+    } else {
+        section.animate({
+            "left" : "0"
+        }, 400, function() {
+            section.removeClass('read');
+            section.css({
+                "z-index": "auto"
+            });
+            $.fn.multiscroll.build();
+        });
     }
+
 }

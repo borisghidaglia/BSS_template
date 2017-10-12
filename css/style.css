@@ -34,18 +34,20 @@
   -moz-transition: -moz-transform 400ms ease-out 100ms;
   transition: transform 400ms ease-out 100ms;
 }
-.slide-left {
-  -webkit-transform: translate(50%, 0);
-  -moz-transform: translate(50%, 0);
-  transform: translate(50%, 0);
+.read-left {
+  z-index: 999;
+  -webkit-transform: translate(-100%, 0);
+  -moz-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
   -webkit-transition: -webkit-transform 400ms ease-out 100ms;
   -moz-transition: -moz-transform 400ms ease-out 100ms;
   transition: transform 400ms ease-out 100ms;
 }
-.slide-right {
-  -webkit-transform: translate(-50%, 0);
-  -moz-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+.read-right {
+  z-index: 999;
+  -webkit-transform: translate(100%, 0);
+  -moz-transform: translate(100%, 0);
+  transform: translate(100%, 0);
   -webkit-transition: -webkit-transform 400ms ease-out 100ms;
   -moz-transition: -moz-transform 400ms ease-out 100ms;
   transition: transform 400ms ease-out 100ms;
