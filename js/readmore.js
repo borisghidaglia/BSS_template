@@ -31,3 +31,13 @@ function readmore(elt,left) {
     }
 
 }
+
+function readmoreMobile(elt) {
+    var section = elt.closest('.background-container');
+        readmore = $(section.children[1]);
+    if (readmore.css('display') == 'none') {
+        readmore.show();
+    } else {
+        readmore.hide();
+    }
+}

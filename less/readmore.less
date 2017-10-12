@@ -1,11 +1,17 @@
+// Desktop
 .more-left,.more-right{
-    background-color: @light_grey;
+    background-color: lighten(@light_grey, 5%);
     position: absolute;
     top: 0;
     left: 0;
     align-items: flex-start;
     overflow: auto;
     .section-container{
+        >span{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
         >h1,>p{
             color: black;
         }
@@ -18,4 +24,35 @@
 
 .more-right{
     .translate(100%,0);
+}
+
+// Mobile
+#main-mobile{
+    .readmore{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        .full();
+        z-index: 2;
+        overflow: auto;
+        background-color:  lighten(@light_grey, 5%);
+        .section-container{
+            padding: 20px;
+            .full();
+            position: absolute;
+            left: 0;
+            top: 0;
+            >span{
+                position: absolute;
+                right: 30px;
+                top: 30px;
+                font-size: 25px;
+                color: @green;
+            }
+            h1,p{
+                color: black;
+            }
+        }
+    }
 }
