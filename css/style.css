@@ -34,6 +34,22 @@
   -moz-transition: -moz-transform 400ms ease-out 100ms;
   transition: transform 400ms ease-out 100ms;
 }
+.slide-left {
+  -webkit-transform: translate(50%, 0);
+  -moz-transform: translate(50%, 0);
+  transform: translate(50%, 0);
+  -webkit-transition: -webkit-transform 400ms ease-out 100ms;
+  -moz-transition: -moz-transform 400ms ease-out 100ms;
+  transition: transform 400ms ease-out 100ms;
+}
+.slide-right {
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -webkit-transition: -webkit-transform 400ms ease-out 100ms;
+  -moz-transition: -moz-transform 400ms ease-out 100ms;
+  transition: transform 400ms ease-out 100ms;
+}
 .translated {
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
@@ -441,4 +457,29 @@ header nav ul li a:visited {
     height: 100%;
     width: 100%;
   }
+}
+.more-left,
+.more-right {
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: flex-start;
+  overflow: auto;
+}
+.more-left .section-container > h1,
+.more-right .section-container > h1,
+.more-left .section-container > p,
+.more-right .section-container > p {
+  color: black;
+}
+.more-left {
+  -webkit-transform: translate(-100%, 0);
+  -moz-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+}
+.more-right {
+  -webkit-transform: translate(100%, 0);
+  -moz-transform: translate(100%, 0);
+  transform: translate(100%, 0);
 }
