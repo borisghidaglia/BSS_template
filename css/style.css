@@ -468,6 +468,7 @@ header nav ul li a:visited {
   left: 0;
   align-items: flex-start;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .more-left .section-container > span,
 .more-right .section-container > span {
@@ -502,6 +503,7 @@ header nav ul li a:visited {
   width: 100%;
   z-index: 2;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
   background-color: #f2f2f2;
 }
 #main-mobile .readmore .section-container {
