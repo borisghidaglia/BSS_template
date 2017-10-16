@@ -113,6 +113,9 @@ body {
     overflow: scroll;
   }
 }
+a {
+  color: inherit;
+}
 a,
 a:hover,
 a:visited,
