@@ -8,7 +8,7 @@ $(document).ready(function () {
     } else {
         mobile = true;
     }
-})
+});
 
 $(window).resize(function () {
     w = $(window).width();

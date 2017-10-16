@@ -3,16 +3,17 @@ var anchors = []
 $(document).ready(function() {
     var w = $(window).width();
     if (w > 768) {
-        var li = document.getElementById('myMenu').children;
+        var li = $("*[data-menuanchor]");
         for (var i = 0; i < li.length; i++) {
             anchor = li[i].attributes.getNamedItem('data-menuanchor');
             if (anchor != null) {
                 anchors[i] = anchor.value;
             }
+        }
         if (anchors == null) {
             anchors = false;
         }
-        }
+        console.log(anchors);
     }
     build_multiscroll();
     if (w > 768) {
