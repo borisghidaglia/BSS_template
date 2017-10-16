@@ -71,6 +71,9 @@
 .green-btn:focus {
   color: white;
 }
+.green-btn a {
+  color: white;
+}
 .green-btn a:hover,
 .green-btn a:focus,
 .green-btn a:visited,
