@@ -19,10 +19,10 @@
     <body id="main" class="container-fluid">
         <header>
             <div id="logo"><span><a href="#"><img src="img/logo.png"></a></span></div>
-            <span><a class="green-btn" href="#">Shop</a></span>
-            <span><a class="green-btn" href="#">Cart</a></span>
-            <span><a class="green-btn" href="#">Account</a></span>
-            <div id="btn-menu" class="hidden-lg" onclick="toggle_menu()" ><span><a href="#">Menu</a></span></div>
+            <span class="hidden-xs"><a class="green-btn" href="#">Shop</a></span>
+            <span class="hidden-xs"><a class="green-btn" href="#">Cart</a></span>
+            <span class="hidden-xs"><a class="green-btn" href="#">Account</a></span>
+            <span class="hidden-lg special-lg" onclick="toggle_menu()"><a class="white-btn" href="#">Menu</a></span>
             <nav class="translate-left">
                 <div id="close-menu" class="hidden-lg" onclick="toggle_menu()"><span class="glyphicon glyphicon-remove"></span></div>
                 <ul id="myMenu">
@@ -31,6 +31,9 @@
                     <li class="wrap"><a href="marque.html">Brand 3</a></li>
                     <li class="wrap"><a href="marque.html">Brand 4</a></li>
                     <li class="wrap"><a href="marque.html">Brand 5</a></li>
+                    <li class="visible-xs"><a href="#">Shop</a></li>
+                    <li class="visible-xs"><a href="#">Cart</a></li>
+                    <li class="visible-xs"><a href="#">Account</a></li>
                     <li><a href="#">Contact us</a></li>
                 </ul>
             </nav>
@@ -252,7 +255,7 @@
                 </div>
                 <div class="background-container" style="background-image:url(img/3.png);">
                 </div>
-                <div class="background-container" style="background-image:url(img/4.jpg);">
+                <div id="brand1" class="background-container" style="background-image:url(img/4.jpg);">
                     <div class="slide-section" style="background-image:url(img/shadow.png);">
                         <div class="section-container">
                             <h1>Brand 1</h1>
@@ -329,7 +332,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="background-container" style="background-image:url(img/1.jpg);">
+                <div id="brand2" class="background-container" style="background-image:url(img/1.jpg);">
                     <div class="slide-section" style="background-image:url(img/shadow.png);">
                         <div class="section-container">
                             <h1>Brand 2</h1>
@@ -382,6 +385,7 @@
     <script type="text/javascript" src="js/scrolls.js"></script>
     <script type="text/javascript" src="js/jquery.easing.js"></script>
     <script type="text/javascript" src="js/jquery.multiscroll.extensions.min.js"></script>
+    <script type="text/javascript" src="js/scroll_to_brand.js"></script>
     <script type="text/javascript" src="js/readmore.js"></script>
     </body>
 </html>

@@ -9,46 +9,7 @@ header{
     top: 0;
     padding: 0 10px;
     z-index: 2;
-    #btn-menu{
-        z-index: -1;
-        display: inline;
-        position: absolute;
-        top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        span{
-            float: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            a{
-                font-family: RobotoCondensedBold;
-                text-transform: uppercase;
-                padding: 0 50px 15px 50px;
-                border-bottom: solid 2px green;
-                color:@green;
-                font-size: 20px;
-            }
-        }
-    @media(max-width: 768px){
-        z-index: inherit;
-        position: relative;
-        margin: inherit;
-        display: block;
-        float: left;
-        top:inherit;
-        height: 100%;
-        span{
-            a{
-                padding: 0 15px;
-                border: none;
 
-            }
-        }
-    }
-    }
     #logo{
         height: 100%;
         float: left;
@@ -64,16 +25,16 @@ header{
                 img{
                     display: block;
                     width: 150px;
-                    @media(max-width: 768px){
-                        width: 100px;
-                        margin-left: -10px;
-                    }
-                    @media(max-width: 340px){
-                        width: 70px;
-                    }
-                    @media(max-width: 310px){
-                        width: 50px;
-                    }
+                    // @media(max-width: 768px){
+                    //     width: 100px;
+                    //     margin-left: -10px;
+                    // }
+                    // @media(max-width: 340px){
+                    //     width: 70px;
+                    // }
+                    // @media(max-width: 310px){
+                    //     width: 50px;
+                    // }
                 }
             }
         }
@@ -128,7 +89,7 @@ header{
             background-color: @green;
             height: 100%;
             width: auto;
-            overflow: scroll;
+            overflow: auto;
             #close-menu{
                 position: absolute;
                 top: 10px;

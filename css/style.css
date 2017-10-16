@@ -57,7 +57,8 @@
   -moz-transform: translate(0, 0);
   transform: translate(0, 0);
 }
-.green-btn {
+.green-btn,
+.white-btn {
   cursor: pointer;
   text-transform: uppercase;
   padding: 5px 10px;
@@ -76,23 +77,27 @@
 .green-btn a:active {
   color: white;
 }
+.white-btn {
+  color: #5CB31C;
+  border: 3px solid #5CB31C;
+  background-color: white;
+  font-weight: bold;
+  padding: 2px 7px;
+}
+.white-btn:hover,
+.white-btn:focus {
+  color: #5CB31C;
+}
+.white-btn a:hover,
+.white-btn a:focus,
+.white-btn a:visited,
+.white-btn a:active {
+  color: #5CB31C;
+}
 @media (max-width: 1200px) {
-  .hidden-lg {
-    display: block !important;
+  .special-lg {
+    display: flex !important;
   }
-}
-@media (max-width: 768px) {
-  .hidden-xs {
-    display: none !important;
-  }
-}
-@media (max-width: 768px) {
-  .visible-xs {
-    display: block !important;
-  }
-}
-.wrapped {
-  display: block !important;
 }
 * {
   box-sizing: border-box;
@@ -129,45 +134,6 @@ header {
   padding: 0 10px;
   z-index: 2;
 }
-header #btn-menu {
-  z-index: -1;
-  display: inline;
-  position: absolute;
-  top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-}
-header #btn-menu span {
-  float: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header #btn-menu span a {
-  font-family: RobotoCondensedBold;
-  text-transform: uppercase;
-  padding: 0 50px 15px 50px;
-  border-bottom: solid 2px green;
-  color: #5CB31C;
-  font-size: 20px;
-}
-@media (max-width: 768px) {
-  header #btn-menu {
-    z-index: inherit;
-    position: relative;
-    margin: inherit;
-    display: block;
-    float: left;
-    top: inherit;
-    height: 100%;
-  }
-  header #btn-menu span a {
-    padding: 0 15px;
-    border: none;
-  }
-}
 header #logo {
   height: 100%;
   float: left;
@@ -186,22 +152,6 @@ header #logo span a {
 header #logo span a img {
   display: block;
   width: 150px;
-}
-@media (max-width: 768px) {
-  header #logo span a img {
-    width: 100px;
-    margin-left: -10px;
-  }
-}
-@media (max-width: 340px) {
-  header #logo span a img {
-    width: 70px;
-  }
-}
-@media (max-width: 310px) {
-  header #logo span a img {
-    width: 50px;
-  }
 }
 header span {
   display: flex;
@@ -256,7 +206,7 @@ header nav ul li a:visited {
     background-color: #5CB31C;
     height: 100%;
     width: auto;
-    overflow: scroll;
+    overflow: auto;
   }
   header nav #close-menu {
     position: absolute;
@@ -603,4 +553,10 @@ header nav ul li a:visited {
   height: 20px;
   margin-left: 5px;
   margin-top: -4px;
+}
+#main-mobile .shop .background-container {
+  height: auto;
+}
+#main-mobile .shop .background-container .product-image {
+  height: auto;
 }
