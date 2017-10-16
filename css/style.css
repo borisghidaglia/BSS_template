@@ -70,6 +70,12 @@
 .green-btn:focus {
   color: white;
 }
+.green-btn a:hover,
+.green-btn a:focus,
+.green-btn a:visited,
+.green-btn a:active {
+  color: white;
+}
 @media (max-width: 1200px) {
   .hidden-lg {
     display: block !important;
@@ -430,7 +436,7 @@ header nav ul li a:visited {
   padding: 20px;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   background-position: left bottom;
   background-repeat: repeat-x;
 }
@@ -472,6 +478,7 @@ header nav ul li a:visited {
 }
 .more-left .section-container > span,
 .more-right .section-container > span {
+  cursor: pointer;
   position: absolute;
   right: 30px;
   top: 30px;
@@ -515,6 +522,7 @@ header nav ul li a:visited {
   top: 0;
 }
 #main-mobile .readmore .section-container > span {
+  cursor: pointer;
   position: absolute;
   right: 30px;
   top: 30px;
@@ -524,4 +532,75 @@ header nav ul li a:visited {
 #main-mobile .readmore .section-container h1,
 #main-mobile .readmore .section-container p {
   color: black;
+}
+.shop .green-bg {
+  background-color: #5CB31C;
+}
+.shop .green-bg .slide-section {
+  padding: 0;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.shop .green-bg .slide-section .product {
+  position: relative;
+  background-color: white;
+  height: 25%;
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: row;
+}
+.shop .green-bg .slide-section .product .product-image {
+  padding: 0;
+  margin: 0;
+  width: 30%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.shop .green-bg .slide-section .product .content {
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+  width: calc(100% - 30%);
+  padding: 10px;
+  padding-right: 20px;
+  padding-bottom: 45px;
+  overflow: hidden;
+}
+.shop .green-bg .slide-section .product .content:after {
+  content: ' ';
+  display: block;
+  background: white;
+  height: 45px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.shop .green-bg .slide-section .product .content h1 {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #5CB31C;
+  padding: 0;
+  margin: 0;
+}
+.shop .green-bg .slide-section .product .content > span {
+  position: absolute;
+  z-index: 2;
+  bottom: 10px;
+  right: 25px;
+  display: inline-block;
+}
+.shop .green-bg .slide-section .product .content > span .green-btn {
+  display: block;
+  margin: 0;
+  font-size: 15px;
+}
+.shop .green-bg .slide-section .product .content > span .green-btn img {
+  height: 20px;
+  margin-left: 5px;
+  margin-top: -4px;
 }

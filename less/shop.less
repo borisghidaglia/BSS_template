@@ -1,0 +1,71 @@
+.shop .green-bg {
+    background-color: @green;
+    .slide-section{
+        padding: 0;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        .product{
+            position: relative;
+            background-color: white;
+            height: 25%;
+            width: 100%;
+            border-bottom: @product-border solid @light_grey;
+            display: flex;
+            flex-direction: row;
+            .product-image {
+                padding: 0;
+                margin: 0;
+                width: @thumbnail_width;
+                height: 100%;
+                background-position: center center;
+                background-size:cover;
+                background-repeat:no-repeat;
+            }
+            .content{
+                position: relative;
+                box-sizing: border-box;
+                height: 100%;
+                width: calc(~"100%" - @thumbnail_width);
+                padding: 10px;
+                padding-right: 20px;
+                padding-bottom: 45px;
+                overflow: hidden;
+                &:after{
+                    content: ' ';
+                    display: block;
+                    background: white;
+                    height: 45px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+                h1{
+                    font-size: 15px;
+                    text-transform: uppercase;
+                    color: @green;
+                    padding: 0;
+                    margin: 0;
+                }
+                >span{
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 10px;
+                    right: 25px;
+                    display: inline-block;
+                    .green-btn{
+                        display: block;
+                        margin: 0;
+                        font-size: 15px;
+                        img{
+                            height: 20px;
+                            margin-left: 5px;
+                            margin-top:-4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
