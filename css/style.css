@@ -388,7 +388,7 @@ header nav ul li a:visited {
 }
 .slide-section {
   width: 100%;
-  height: calc(100% - 88px);
+  height: calc(100vh - 88px);
   padding: 20px;
   display: flex;
   align-items: flex-end;
@@ -416,7 +416,7 @@ header nav ul li a:visited {
   font-size: 20px;
   font-family: RobotoCondensedBold;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .slide-section {
     height: 100%;
     width: 100%;
