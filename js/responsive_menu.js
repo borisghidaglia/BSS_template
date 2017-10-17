@@ -1,8 +1,8 @@
-var w = $(window).width();
-
+var w = $(window).width(),
+    mobile;
 
 $(document).ready(function () {
-    w = $(window).width();
+    w = window.innerWidth;
     if (w>=768) {
         mobile = false;
     } else {
@@ -11,7 +11,7 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
-    w = $(window).width();
+    w = window.innerWidth;
     if (w>=768 && mobile) {
         location.hash = "";
         location.reload();

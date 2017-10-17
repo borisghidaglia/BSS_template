@@ -1,7 +1,7 @@
 var exists = false;
 var anchors = []
 $(document).ready(function() {
-    var w = $(window).width();
+    var w = window.innerWidth;
     if (w > 768) {
         var li = $("*[data-menuanchor]");
         for (var i = 0; i < li.length; i++) {
@@ -27,7 +27,8 @@ $(document).ready(function() {
 });
 
 $(window).resize(function () {
-    var w = $(window).width();
+    console.log(exists);
+    var w = window.innerWidth;
     if (w > 768){
         if (!exists) {
             $.fn.multiscroll.build();
