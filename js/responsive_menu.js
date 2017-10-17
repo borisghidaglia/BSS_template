@@ -26,8 +26,14 @@ $(window).resize(function () {
 function toggle_menu() {
     if (w <= 1200 && !$('nav').hasClass('translated')) {
         $('nav').addClass('translated');
+        $('nav').css({
+            'box-shadow' : '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)'
+        });
     } else {
         $('nav').removeClass('translated');
+        $('nav').css({
+            'box-shadow' : 'none'
+        });
     }
 }
 
