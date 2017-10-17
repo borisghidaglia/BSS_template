@@ -41,3 +41,12 @@ function scroll_to_anchor(hash) {
         }
     }
 }
+
+function scroll_down() {
+    header_height = window.getComputedStyle(document.getElementsByTagName('header')[0]).height;
+    header_height = header_height.replace('px','');
+    scrollValue = window.innerHeight;
+    $('body,html').animate({
+        'scrollTop' :(scrollValue - header_height)*2,
+    },600,'swing');
+}

@@ -2,7 +2,7 @@ var exists = false;
 var anchors = []
 $(document).ready(function() {
     var w = window.innerWidth;
-    if (w > 768) {
+    if (w >= 767) {
         var li = $("*[data-menuanchor]");
         for (var i = 0; i < li.length; i++) {
             anchor = li[i].attributes.getNamedItem('data-menuanchor');
@@ -13,10 +13,9 @@ $(document).ready(function() {
         if (anchors == null) {
             anchors = false;
         }
-        console.log(anchors);
     }
     build_multiscroll();
-    if (w > 768) {
+    if (w >= 767) {
         exists = true;
     } else {
         $.fn.multiscroll.destroy();
@@ -27,9 +26,8 @@ $(document).ready(function() {
 });
 
 $(window).resize(function () {
-    console.log(exists);
     var w = window.innerWidth;
-    if (w > 768){
+    if (w >= 767){
         if (!exists) {
             $.fn.multiscroll.build();
             document.getElementById('main').style.overflow = 'hidden';

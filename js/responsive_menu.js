@@ -3,7 +3,7 @@ var w = $(window).width(),
 
 $(document).ready(function () {
     w = window.innerWidth;
-    if (w>=768) {
+    if (w >= 767) {
         mobile = false;
     } else {
         mobile = true;
@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 $(window).resize(function () {
     w = window.innerWidth;
-    if (w>=768 && mobile) {
+    if (w >= 767 && mobile) {
         location.hash = "";
         location.reload();
         mobile = false;
