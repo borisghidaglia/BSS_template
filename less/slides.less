@@ -4,7 +4,7 @@
     position: absolute;
     z-index: 0;
     width:  calc(100% + 1px);
-    height: calc(~"100%" - @header-height);
+    height: calc(~"100vh" - @header-height);
     top: @header-height;
     left: 0;
     .background-container{
@@ -15,6 +15,13 @@
         background-position: center center;
         background-size:cover;
         background-repeat:no-repeat;
+    }
+    #multiscroll{
+        height: 100%;
+        position: relative;
+        .ms-section,.ms-table,.ms-tableCell{
+            height: calc(~"100vh" - @header-height) !important;
+        }
     }
 }
 
