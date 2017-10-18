@@ -582,11 +582,13 @@ header nav ul li a:visited {
   margin-top: 50px;
 }
 #main-cart .cart h1,
+#main-cart .cart h2,
 #main-cart .cart p {
   text-align: center;
 }
 @media (max-width: 767px) {
   #main-cart .cart h1,
+  #main-cart .cart h2,
   #main-cart .cart p {
     text-align: left;
   }
@@ -595,6 +597,9 @@ header nav ul li a:visited {
   color: #5CB31C;
   font-family: RobotoCondensedBold;
   font-size: 50px;
+}
+#main-cart .cart h2 {
+  color: #5CB31C;
 }
 #main-cart .cart p {
   font-size: 15px;
@@ -621,6 +626,8 @@ header nav ul li a:visited {
   color: white;
 }
 .cart .table-responsive table thead th {
+  text-transform: uppercase;
+  font-weight: lighter;
   text-align: center;
 }
 .cart .table-responsive table tbody tr td {

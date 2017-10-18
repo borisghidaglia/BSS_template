@@ -2,11 +2,11 @@
     margin-top: @header-height;
     .cart{
         margin-top: 50px;
-        h1,p{
+        h1,h2,p{
             text-align: center;
         }
         @media(max-width: 767px){
-            h1,p{
+            h1,h2,p{
                 text-align: left;
             }
         }
@@ -14,6 +14,9 @@
             color: @green;
             font-family: RobotoCondensedBold;
             font-size: @main-h1;
+        }
+        h2{
+            color: @green;
         }
         p{
             font-size: @main-p;
@@ -40,6 +43,8 @@
                 background-color: @green;
                 color: white;
                 th{
+                    text-transform: uppercase;
+                    font-weight: lighter;
                     text-align: center;
                 }
             }
