@@ -575,3 +575,61 @@ header nav ul li a:visited {
 #main-mobile .shop .background-container .product-image {
   height: auto;
 }
+#main-cart {
+  margin-top: 88px;
+}
+#main-cart .cart {
+  margin-top: 50px;
+}
+#main-cart .cart h1,
+#main-cart .cart p {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  #main-cart .cart h1,
+  #main-cart .cart p {
+    text-align: left;
+  }
+}
+#main-cart .cart h1 {
+  color: #5CB31C;
+  font-family: RobotoCondensedBold;
+  font-size: 50px;
+}
+#main-cart .cart p {
+  font-size: 15px;
+}
+.cart .green-btn {
+  cursor: default;
+}
+.cart .table-responsive {
+  margin-top: 30px;
+}
+@media (max-width: 767px) {
+  .cart .table-responsive {
+    border: none;
+  }
+}
+.cart .table-responsive table {
+  white-space: nowrap;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+.cart .table-responsive table thead {
+  background-color: #5CB31C;
+  color: white;
+}
+.cart .table-responsive table thead th {
+  text-align: center;
+}
+.cart .table-responsive table tbody tr td {
+  vertical-align: middle;
+  padding: 10px;
+}
+.cart .table-responsive table tbody img {
+  max-width: 100px;
+  max-height: 100px;
+  display: block;
+  margin: auto;
+}
