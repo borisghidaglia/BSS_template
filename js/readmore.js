@@ -14,14 +14,14 @@ function readmore(elt,left) {
         });
         section.animate({
             'left' : animation
-        },400, function() {
+        },700, function() {
             section.addClass('read');
             $.fn.multiscroll.destroy();
         });
     } else {
         section.animate({
             "left" : "0"
-        }, 400, function() {
+        }, 700, function() {
             section.removeClass('read');
             section.css({
                 "z-index": "auto"
