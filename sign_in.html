@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Lorem ipsum dolor sit amet">
+    <meta name="viewport" content="width=device-width,minimum-scale=1, maximum-scale=1">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#5CB31C">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#5CB31C">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#5CB31C">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Compte</title>
+</head>
+    <body>
+        <header>
+            <div id="logo"><span><a href="index.html#home"><img src="img/logo.png"></a></span></div>
+            <span class="hidden-xs"><a class="green-btn" href="index.html#brand1">Boutique</a></span>
+            <span class="hidden-xs"><a class="green-btn" href="cart_nonempty.html">Panier</a></span>
+            <span class="hidden-xs"><a class="green-btn" href="sign_in.html">Compte</a></span>
+            <span class="hidden-lg special-lg" onclick="toggle_menu()"><a class="white-btn" href="#">Menu</a></span>
+            <nav class="translate-left">
+                <div id="close-menu" class="hidden-lg" onclick="toggle_menu()"><span class="glyphicon glyphicon-remove"></span></div>
+                <ul id="myMenu">
+                    <li class="wrap"><a href="marque.html">Marque 1</a></li>
+                    <li class="wrap"><a href="marque.html">Marque 2</a> </li>
+                    <li style="display:none" class="wrap" data-menuanchor="home"><a href="#home"></a></li>
+                    <li style="display:none" class="wrap" data-menuanchor="brand1"><a href="#brand1"></a></li>
+                    <li style="display:none" class="wrap" data-menuanchor="brand1-1"><a href="#brand1-1"></a></li>
+                    <li style="display:none" class="wrap" data-menuanchor="brand2"><a href="#brand2"></a></li>
+                    <li class="visible-xs"><a href="index.html#brand1">Boutique</a></li>
+                    <li class="visible-xs"><a href="cart_nonempty.html">Panier</a></li>
+                    <li class="visible-xs"><a href="#">Compte</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="main-account" class="container-fluid">
+                <div id="main-register">
+                    <div class="material-tile">
+                        <div class="title-section">
+                            <h1>Connexion</h1>
+                            <p>Bon retour parmis nous !</p>
+                        </div>
+                        <div class="form-section">
+                            <form action="#" method="post">
+                                <ul class="errorList"> <!-- IDEA: GENERAL ERRORS -->
+                                    <li></li>
+                                </ul>
+                                <div class="material-input">
+                                    <ul class="errorList">
+                                        <li></li>
+                                    </ul>
+                                    <input type="text" name="mail">
+                                    <label for="mail">Mail</label>
+                                </div>
+                                <div class="material-input">
+                                    <ul class="errorList">
+                                        <li></li>
+                                    </ul>
+                                    <input type="password" name="password">
+                                    <label for="password">Mot de passe</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+        <script type="text/javascript" src="js/forms.js"></script>
+        <script type="text/javascript" src="js/responsive_menu.js"></script>
+    </body>
+</html>

@@ -1,3 +1,4 @@
+// EFFECTS
 .translate-left{
     .translate_effect(100%,0);
 }
@@ -15,6 +16,8 @@
 .translated{
     .translate(0,0);
 }
+
+//BUTTONS
 
 .green-btn{
     cursor: pointer;
@@ -52,29 +55,106 @@
     }
 }
 
-// .hidden-lg{
-//     @media (max-width:1200px){
-//         display: block !important;
-//     }
-// }
+// RESPONSIVE TOOL
+
 .special-lg{
     @media (max-width:1200px){
         display: flex !important;
     }
 }
 
-// .hidden-xs{
-//     @media (max-width:768px){
-//         display: none !important;
-//     }
-// }
-//
-// .visible-xs{
-//     @media (max-width:768px){
-//         display: block !important;
-//     }
-// }
-//
-// .wrapped{
-//     display: block !important;
-// }
+// MATERIAL
+
+.shadow{
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.material-tile{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    border-radius: 3px;
+    padding-bottom: 30px;
+    .shadow;
+    .title-section{
+        padding:16px;
+        margin-bottom: 20px;
+        background-color: @green;
+        h1,p{
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            color: white;
+            font-family: RobotoCondensed;
+            background: transparent;
+        }
+        h1{
+            font-size: 35px;
+            padding-bottom: 8px
+        }
+    }
+    @media(max-width:767px){
+        width:100%;
+    }
+}
+
+.material-input{
+    margin-bottom: 20px;
+    position: relative;
+    img{
+        width: 24px;
+        height: 24px;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-35px);
+    }
+    &>label{
+        pointer-events: none;
+        color: @dark_grey;
+        font-size: 16px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(16px);
+          transition:400ms ease all;
+          -moz-transition:400ms ease all;
+          -webkit-transition:400ms ease all;
+    }
+    &>input{
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 8px;
+        max-width: 300px;
+        border: none;
+        border-bottom: 1px solid @dark_grey;
+        color: @dark_grey;
+        width: 300px;
+        @media(max-width: 767px){
+            max-width: 200px;
+        }
+        &[type="password"]{
+            background: url('../img/pass.png') no-repeat;
+            background-size: 18px;
+            background-position: 98% 20px;
+        }
+        &[name="mail"]{
+            background: url('../img/mail.png') no-repeat;
+            background-size: 18px;
+            background-position: 98% 20px;
+        }
+        &:focus{
+            outline: none;
+        }
+        &:focus + label, &[class="active"] + label{
+            top:-12px;
+            font-size: 12px;
+            transform: translateY(6px);
+            color:@green;
+        }
+        &:focus, &[class="active"] {
+            border-bottom: solid 1.5px @green;
+        }
+
+    }
+}

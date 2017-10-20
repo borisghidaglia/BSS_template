@@ -102,6 +102,104 @@
     display: flex !important;
   }
 }
+.shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.material-tile {
+  background-color: white;
+  width: 500px;
+  margin: auto;
+  border-radius: 3px;
+  padding-bottom: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.material-tile .title-section {
+  padding: 16px;
+  margin-bottom: 20px;
+  background-color: #5CB31C;
+}
+.material-tile .title-section h1,
+.material-tile .title-section p {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: RobotoCondensed;
+  background: transparent;
+}
+.material-tile .title-section h1 {
+  font-size: 35px;
+  padding-bottom: 8px;
+}
+@media (max-width: 767px) {
+  .material-tile {
+    width: 100%;
+  }
+}
+.material-input {
+  margin-bottom: 20px;
+  position: relative;
+}
+.material-input img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-35px);
+}
+.material-input > label {
+  pointer-events: none;
+  color: #9E9E9E;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(16px);
+  transition: 400ms ease all;
+  -moz-transition: 400ms ease all;
+  -webkit-transition: 400ms ease all;
+}
+.material-input > input {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 8px;
+  max-width: 300px;
+  border: none;
+  border-bottom: 1px solid #9E9E9E;
+  color: #9E9E9E;
+  width: 300px;
+}
+@media (max-width: 767px) {
+  .material-input > input {
+    max-width: 200px;
+  }
+}
+.material-input > input[type="password"] {
+  background: url('../img/pass.png') no-repeat;
+  background-size: 18px;
+  background-position: 98% 20px;
+}
+.material-input > input[name="mail"] {
+  background: url('../img/mail.png') no-repeat;
+  background-size: 18px;
+  background-position: 98% 20px;
+}
+.material-input > input:focus {
+  outline: none;
+}
+.material-input > input:focus + label,
+.material-input > input[class="active"] + label {
+  top: -12px;
+  font-size: 12px;
+  transform: translateY(6px);
+  color: #5CB31C;
+}
+.material-input > input:focus,
+.material-input > input[class="active"] {
+  border-bottom: solid 1.5px #5CB31C;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -675,4 +773,20 @@ header nav ul li a:visited {
   max-height: 100px;
   display: block;
   margin: auto;
+}
+#main-account {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  padding-top: calc(138px);
+}
+#main-register .form-section {
+  display: flex;
+  justify-content: center;
+}
+#main-register .form-section .errorList {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
 }

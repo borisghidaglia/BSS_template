@@ -36,7 +36,6 @@ var list_dict = []; // will contain dict of quantity/obj_price for each table ro
 })();
 
 function refresh(evt) {
-    console.log(this);
     for (var i = 0; i < list_dict.length; i++) {
         quant = list_dict[i].quantity;
         if (quant == this || !evt) {
