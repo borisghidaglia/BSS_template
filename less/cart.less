@@ -52,6 +52,41 @@
                 tr td{
                     vertical-align: middle;
                     padding: 10px;
+                    .input-number{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    button{
+                        outline:none;
+                          -webkit-appearance: none;
+                          background-color: transparent;
+                          border: none;
+                          font-size: 12px;
+                          display: block;
+                          color: @green;
+                    }
+                    button[left]{
+                        float: left;
+                    }
+                    button[right]{
+                        float: right;
+                    }
+                    input{
+                        background: transparent;
+                        border: none;
+                        border-bottom: 1px solid @green;
+                        text-align: center;
+                        -webkit-appearance: textfield;
+                        -moz-appearance: textfield;
+                        appearance: textfield;
+                        &::-webkit-inner-spin-button,&::-webkit-outer-spin-button{
+                            -webkit-appearance: none;
+                        }
+                        &:focus{
+                            outline: none;
+                        }
+                    }
                 }
                 img{
                     max-width: 100px;

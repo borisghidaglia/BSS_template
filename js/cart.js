@@ -8,7 +8,9 @@ var list_dict = []; // will contain dict of quantity/obj_price for each table ro
 
     for (var i = 0; i < quantity.length; i++) {
 
-        quantity[i].addEventListener('input', refresh);
+        quantity[i].addEventListener('onchange', refresh);
+        quantity[i].parentNode.querySelector('button[left]').addEventListener('click',refresh.bind(quantity[i]));
+        quantity[i].parentNode.querySelector('button[right]').addEventListener('click',refresh.bind(quantity[i]));
 
         if (!obj_pro[0]) {
             dict = {
@@ -34,6 +36,7 @@ var list_dict = []; // will contain dict of quantity/obj_price for each table ro
 })();
 
 function refresh(evt) {
+    console.log(this);
     for (var i = 0; i < list_dict.length; i++) {
         quant = list_dict[i].quantity;
         if (quant == this || !evt) {

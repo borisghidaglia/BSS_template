@@ -634,6 +634,42 @@ header nav ul li a:visited {
   vertical-align: middle;
   padding: 10px;
 }
+.cart .table-responsive table tbody tr td .input-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart .table-responsive table tbody tr td button {
+  outline: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  display: block;
+  color: #5CB31C;
+}
+.cart .table-responsive table tbody tr td button[left] {
+  float: left;
+}
+.cart .table-responsive table tbody tr td button[right] {
+  float: right;
+}
+.cart .table-responsive table tbody tr td input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #5CB31C;
+  text-align: center;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.cart .table-responsive table tbody tr td input::-webkit-inner-spin-button,
+.cart .table-responsive table tbody tr td input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.cart .table-responsive table tbody tr td input:focus {
+  outline: none;
+}
 .cart .table-responsive table tbody img {
   max-width: 100px;
   max-height: 100px;
