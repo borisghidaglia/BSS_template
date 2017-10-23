@@ -41,34 +41,36 @@
         <div id="main-account" class="container-fluid">
                 <div class="material-tile">
                     <div class="title-section">
-                        <h1>Connexion</h1>
-                        <p>Bon retour parmis nous !</p>
+                        <h1>Modifier le mot de passe</h1>
                     </div>
                     <div class="form-section">
                         <form action="#" method="post">
                             <ul class="errorList"> <!-- IDEA: GENERAL ERRORS -->
                                 <li></li>
                             </ul>
-                            <div class="material-input mail">
+                            <div class="material-input">
                                 <ul class="errorList">
                                     <li></li>
                                 </ul>
-                                <input type="text" name="mail">
-                                <label for="mail">Mail</label>
+                                <input type="password" name="Opassword">
+                                <label for="Opassword">Ancien</label>
                             </div>
                             <div class="material-input">
                                 <ul class="errorList">
                                     <li></li>
                                 </ul>
-                                <input type="password" name="password">
-                                <label for="password">Mot de passe</label>
+                                <input type="password" name="Npassword">
+                                <label for="Npassword">Nouveau</label>
                             </div>
-                            <input class="submit-button" type="submit" name="submit" value="Se connecter"></input>
+                            <div class="material-input">
+                                <ul class="errorList">
+                                    <li></li>
+                                </ul>
+                                <input type="password" name="CNpassword">
+                                <label for="CNpassword">Confirmer</label>
+                            </div>
+                            <input class="submit-button" type="submit" name="submit" value="Sauvegarder"></input>
                         </form>
-                    </div>
-                    <div class="container-fluid more">
-                        <p>Pas encore inscrit ? <a href="register.html">Créer un compte</a></p>
-                        <p><a href="#">Mot de passe oublié</a></p>
                     </div>
                 </div>
         </div>

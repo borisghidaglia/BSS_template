@@ -1,5 +1,44 @@
 #main-account{
+    overflow: auto;
     position: fixed;
     .full();
     padding-top: calc(@header-height + 50px);
+    padding-bottom: 50px;
+    .form-section{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        .mail > input{
+            .sticky-img(url('../img/mail.png'));
+        }
+        .adresse > input{
+            .sticky-img(url('../img/home.png'));
+        }
+        .tel > input{
+            .sticky-img(url('../img/phone.png'));
+        }
+        .errorList{
+            list-style: none;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        .submit-button{
+            display: block;
+            margin: 50px auto 10px auto;
+        }
+    }
+    .more{
+        margin-top: 30px;
+        p{
+            text-align: center;
+            line-height: 1;
+            a{
+                text-decoration: underline;
+                &:hover{
+                    color: inherit;
+                }
+            }
+        }
+    }
 }

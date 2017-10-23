@@ -105,6 +105,24 @@
 .shadow {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
+.submit-button {
+  padding: 10px 20px;
+  background-color: #5CB31C;
+  color: white;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'RobotoBold';
+  display: inline-block;
+  border-radius: 3px;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-transition: box-shadow 300ms ease;
+  transition: box-shadow 300ms ease;
+}
+.submit-button:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
 .material-tile {
   background-color: white;
   width: 500px;
@@ -170,11 +188,6 @@
 }
 .material-input > input[type="password"] {
   background: url('../img/pass.png') no-repeat;
-  background-size: 15px;
-  background-position: 98% 25px;
-}
-.material-input > input[name="mail"] {
-  background: url('../img/mail.png') no-repeat;
   background-size: 15px;
   background-position: 98% 25px;
 }
@@ -768,32 +781,53 @@ header nav ul li a:visited {
   margin: auto;
 }
 #main-account {
+  overflow: auto;
   position: fixed;
   height: 100%;
   width: 100%;
   padding-top: calc(138px);
+  padding-bottom: 50px;
 }
-#main-register .form-section {
+#main-account .form-section {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
-#main-register .form-section .errorList {
+#main-account .form-section .mail > input {
+  background: url('../img/mail.png') no-repeat;
+  background-size: 15px;
+  background-position: 98% 25px;
+}
+#main-account .form-section .adresse > input {
+  background: url('../img/home.png') no-repeat;
+  background-size: 15px;
+  background-position: 98% 25px;
+}
+#main-account .form-section .tel > input {
+  background: url('../img/phone.png') no-repeat;
+  background-size: 15px;
+  background-position: 98% 25px;
+}
+#main-account .form-section .errorList {
   list-style: none;
   display: block;
   margin: 0;
   padding: 0;
 }
-#main-register .more {
+#main-account .form-section .submit-button {
+  display: block;
+  margin: 50px auto 10px auto;
+}
+#main-account .more {
   margin-top: 30px;
 }
-#main-register .more p {
+#main-account .more p {
   text-align: center;
   line-height: 1;
 }
-#main-register .more p a {
+#main-account .more p a {
   text-decoration: underline;
 }
-#main-register .more p a:hover {
+#main-account .more p a:hover {
   color: inherit;
 }

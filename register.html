@@ -41,14 +41,62 @@
         <div id="main-account" class="container-fluid">
                 <div class="material-tile">
                     <div class="title-section">
-                        <h1>Connexion</h1>
-                        <p>Bon retour parmis nous !</p>
+                        <h1>Créer un compte</h1>
                     </div>
                     <div class="form-section">
                         <form action="#" method="post">
                             <ul class="errorList"> <!-- IDEA: GENERAL ERRORS -->
                                 <li></li>
                             </ul>
+                            <div class="material-input">
+                                <ul class="errorList">
+                                    <li></li>
+                                </ul>
+                                <input type="text" name="prenom">
+                                <label for="prenom">Prénom</label>
+                            </div>
+                            <div class="material-input">
+                                <ul class="errorList">
+                                    <li></li>
+                                </ul>
+                                <input type="text" name="nom">
+                                <label for="nom">Nom</label>
+                            </div>
+                            <div class="material-input adresse">
+                                <ul class="errorList">
+                                    <li></li>
+                                </ul>
+                                <input type="text" name="adresse">
+                                <label for="adresse">Adresse</label>
+                            </div>
+                            <div class="material-input">
+                                <ul class="errorList">
+                                    <li></li>
+                                </ul>
+                                <input type="text" name="Cadresse">
+                                <label for="Cadresse">Complément (appt, n°, ...)</label>
+                            </div>
+                            <div class="material-input">
+                                <ul class="errorList">
+                                    <li></li>
+                                </ul>
+                                <input type="text" name="code-p">
+                                <label for="code-p">Code Postal</label>
+                            </div>
+                            <div class="material-input">
+                                <ul class="errorList">
+                                    <li></li>
+                                </ul>
+                                <input type="text" name="ville">
+                                <label for="ville">Ville</label>
+                            </div>
+                            <div class="material-input tel">
+                                <ul class="errorList">
+                                    <li></li>
+                                </ul>
+                                <input type="text" name="tel">
+                                <label for="tel">Téléphone</label>
+                            </div>
                             <div class="material-input mail">
                                 <ul class="errorList">
                                     <li></li>
@@ -63,12 +111,18 @@
                                 <input type="password" name="password">
                                 <label for="password">Mot de passe</label>
                             </div>
-                            <input class="submit-button" type="submit" name="submit" value="Se connecter"></input>
+                            <div class="material-input">
+                                <ul class="errorList">
+                                    <li></li>
+                                </ul>
+                                <input type="password" name="Vpassword">
+                                <label for="Vpassword">Confirmer le mot de passe</label>
+                            </div>
+                            <input class="submit-button" type="submit" name="submit" value="S'enregistrer"></input>
                         </form>
                     </div>
                     <div class="container-fluid more">
-                        <p>Pas encore inscrit ? <a href="register.html">Créer un compte</a></p>
-                        <p><a href="#">Mot de passe oublié</a></p>
+                        <p>Déjà inscrit ? <a href="register.html">Se connecter</a></p>
                     </div>
                 </div>
         </div>
