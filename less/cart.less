@@ -1,5 +1,6 @@
 #main-cart{
     margin-top: @header-height;
+    padding-bottom: 50px;
     .cart{
         margin-top: 50px;
         h1,h2,p{
@@ -39,13 +40,18 @@
             text-align: center;
             width: 50%;
             margin: auto;
-            thead{
+            thead,tfoot{
                 background-color: @green;
                 color: white;
                 th{
                     text-transform: uppercase;
                     font-weight: lighter;
                     text-align: center;
+                }
+            }
+            tfoot{
+                th{
+                    font-size: 18px;
                 }
             }
             tbody{
@@ -95,6 +101,21 @@
                     margin: auto;
                 }
             }
+        }
+    }
+    #totals{
+        text-align: center;
+        h1{
+            font-family: RobotoCondensed;
+            font-size: 30px;
+            #total{
+                font-family: RobotoCondensedThin;
+                font-weight: bold;
+                font-size: 30px;
+            }
+        }
+        .submit-button{
+            margin: 10px auto;
         }
     }
 }

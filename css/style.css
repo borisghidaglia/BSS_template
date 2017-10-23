@@ -681,6 +681,7 @@ header nav ul li a:visited {
 }
 #main-cart {
   margin-top: 88px;
+  padding-bottom: 50px;
 }
 #main-cart .cart {
   margin-top: 50px;
@@ -725,14 +726,19 @@ header nav ul li a:visited {
   width: 50%;
   margin: auto;
 }
-.cart .table-responsive table thead {
+.cart .table-responsive table thead,
+.cart .table-responsive table tfoot {
   background-color: #5CB31C;
   color: white;
 }
-.cart .table-responsive table thead th {
+.cart .table-responsive table thead th,
+.cart .table-responsive table tfoot th {
   text-transform: uppercase;
   font-weight: lighter;
   text-align: center;
+}
+.cart .table-responsive table tfoot th {
+  font-size: 18px;
 }
 .cart .table-responsive table tbody tr td {
   vertical-align: middle;
@@ -780,6 +786,21 @@ header nav ul li a:visited {
   display: block;
   margin: auto;
 }
+.cart #totals {
+  text-align: center;
+}
+.cart #totals h1 {
+  font-family: RobotoCondensed;
+  font-size: 30px;
+}
+.cart #totals h1 #total {
+  font-family: RobotoCondensedThin;
+  font-weight: bold;
+  font-size: 30px;
+}
+.cart #totals .submit-button {
+  margin: 10px auto;
+}
 #main-account {
   overflow: auto;
   position: fixed;
@@ -809,10 +830,13 @@ header nav ul li a:visited {
   background-position: 98% 25px;
 }
 #main-account .form-section .errorList {
-  list-style: none;
-  display: block;
-  margin: 0;
-  padding: 0;
+  margin: 0 auto 10px auto;
+}
+#main-account .form-section .errorList li {
+  list-style: inside decimal;
+  font-weight: bold;
+  color: #EF5350;
+  padding: 10px 0;
 }
 #main-account .form-section .submit-button {
   display: block;
@@ -830,4 +854,8 @@ header nav ul li a:visited {
 }
 #main-account .more p a:hover {
   color: inherit;
+}
+#main-account .change-pass {
+  margin: 0 auto;
+  padding: 0;
 }

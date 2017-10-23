@@ -1,14 +1,15 @@
 var list_dict = []; // will contain dict of quantity/obj_price for each table row
+// get the table cells we're insterested in
+var quantity = document.getElementsByClassName('quantity'),
+obj_price = document.getElementsByClassName('price'),
+obj_pro = document.getElementsByClassName('pro-price'),
+product_ids = document.querySelectorAll('td[product-id]');
 
 (function() {
-    // get the table cells we're insterested in
-    var quantity = document.getElementsByClassName('quantity'),
-        obj_price = document.getElementsByClassName('price');
-        obj_pro = document.getElementsByClassName('pro-price');
 
     for (var i = 0; i < quantity.length; i++) {
 
-        quantity[i].addEventListener('onchange', refresh);
+        quantity[i].addEventListener('keyup', refresh);
         quantity[i].parentNode.querySelector('button[left]').addEventListener('click',refresh.bind(quantity[i]));
         quantity[i].parentNode.querySelector('button[right]').addEventListener('click',refresh.bind(quantity[i]));
 
@@ -77,4 +78,24 @@ function refresh_total(obj,evt) {
         obj_total_pro = document.getElementById('total-pro');
         obj_total_pro.innerText = total_pro + "€";
     }
+}
+
+function submit_cart() {
+    //create a form
+    var form = document.getElementById('submit-cart');
+
+    //create input element
+    var i = document.createElement("input");
+    i.type = "text";
+    i.name = "user_name";
+    i.id = "user_name1";
+
+    for (var i = 0; i < product_ids.length; i++) {
+        var input = document.createElement("input");
+        input.type = "hidden";
+        input.name = product_ids[i].getAttribute('product-id');
+        input.value = quantity[i].value;
+        form.appendChild(input);
+    }
+    form.submit();
 }
