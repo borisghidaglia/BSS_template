@@ -140,15 +140,6 @@
   margin-bottom: 20px;
   position: relative;
 }
-.material-input img {
-  width: 24px;
-  height: 24px;
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translateX(-35px);
-}
 .material-input > label {
   pointer-events: none;
   color: #9E9E9E;
@@ -156,10 +147,11 @@
   position: absolute;
   top: 0;
   left: 0;
+  font-weight: lighter;
   transform: translateY(16px);
-  transition: 400ms ease all;
-  -moz-transition: 400ms ease all;
-  -webkit-transition: 400ms ease all;
+  transition: 200ms all;
+  -moz-transition: 200ms all;
+  -webkit-transition: 200ms all;
 }
 .material-input > input {
   display: block;
@@ -178,13 +170,13 @@
 }
 .material-input > input[type="password"] {
   background: url('../img/pass.png') no-repeat;
-  background-size: 18px;
-  background-position: 98% 20px;
+  background-size: 15px;
+  background-position: 98% 25px;
 }
 .material-input > input[name="mail"] {
   background: url('../img/mail.png') no-repeat;
-  background-size: 18px;
-  background-position: 98% 20px;
+  background-size: 15px;
+  background-position: 98% 25px;
 }
 .material-input > input:focus {
   outline: none;
@@ -194,10 +186,11 @@
   top: -12px;
   font-size: 12px;
   transform: translateY(6px);
+}
+.material-input > input:focus + label {
   color: #5CB31C;
 }
-.material-input > input:focus,
-.material-input > input[class="active"] {
+.material-input > input:focus {
   border-bottom: solid 1.5px #5CB31C;
 }
 * {
@@ -781,6 +774,7 @@ header nav ul li a:visited {
   padding-top: calc(138px);
 }
 #main-register .form-section {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
 }
@@ -789,4 +783,17 @@ header nav ul li a:visited {
   display: block;
   margin: 0;
   padding: 0;
+}
+#main-register .more {
+  margin-top: 30px;
+}
+#main-register .more p {
+  text-align: center;
+  line-height: 1;
+}
+#main-register .more p a {
+  text-decoration: underline;
+}
+#main-register .more p a:hover {
+  color: inherit;
 }

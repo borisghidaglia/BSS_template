@@ -100,15 +100,6 @@
 .material-input{
     margin-bottom: 20px;
     position: relative;
-    img{
-        width: 24px;
-        height: 24px;
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        transform: translateX(-35px);
-    }
     &>label{
         pointer-events: none;
         color: @dark_grey;
@@ -116,10 +107,11 @@
         position: absolute;
         top: 0;
         left: 0;
+        font-weight: lighter;
         transform: translateY(16px);
-          transition:400ms ease all;
-          -moz-transition:400ms ease all;
-          -webkit-transition:400ms ease all;
+          transition:200ms all;
+          -moz-transition:200ms all;
+          -webkit-transition:200ms all;
     }
     &>input{
         display: block;
@@ -134,14 +126,10 @@
             max-width: 200px;
         }
         &[type="password"]{
-            background: url('../img/pass.png') no-repeat;
-            background-size: 18px;
-            background-position: 98% 20px;
+            .sticky-img(url('../img/pass.png'),15px,98% 25px);
         }
         &[name="mail"]{
-            background: url('../img/mail.png') no-repeat;
-            background-size: 18px;
-            background-position: 98% 20px;
+            .sticky-img(url('../img/mail.png'),15px,98% 25px);
         }
         &:focus{
             outline: none;
@@ -150,11 +138,14 @@
             top:-12px;
             font-size: 12px;
             transform: translateY(6px);
-            color:@green;
-        }
-        &:focus, &[class="active"] {
-            border-bottom: solid 1.5px @green;
         }
 
+        &:focus + label {
+            color: @green;
+        }
+
+        &:focus {
+            border-bottom: solid 1.5px @green;
+        }
     }
 }
