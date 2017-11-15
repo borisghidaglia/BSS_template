@@ -744,6 +744,11 @@ header nav ul li a:visited {
   vertical-align: middle;
   padding: 10px;
 }
+.cart .table-responsive table tbody tr td .glyphicon-remove {
+  color: #5CB31C;
+  top: 3px;
+  cursor: pointer;
+}
 .cart .table-responsive table tbody tr td .input-number {
   display: flex;
   align-items: center;
